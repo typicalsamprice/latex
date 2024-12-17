@@ -1,0 +1,4 @@
+/skel/.auctex-auto/
+/skel/document.*
+
+!/skel/document.tex
