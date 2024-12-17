@@ -1,0 +1,70 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+
+\documentclass{article}
+
+\usepackage{etoolbox}
+\input{options}
+
+
+%\booltrue{EnableTikz}
+\booltrue{EnableFancyHeaders}
+%\booltrue{DoubleSpacing}
+%\booltrue{EnableShortCitations}
+\booltrue{EnableMinted}
+
+\input{pkglist}
+\input{letterfonts}
+
+\input{pairedops}
+\input{othermath}
+
+\input{misc}
+
+\newcommand{\coursetype}{MATH}
+\newcommand{\coursenum}{464}
+\newcommand{\assntitle}{Syllabically Egregious}
+
+% Header config
+\fancyhead[L]{\coursetype{} \coursenum{}}
+\fancyhead[C]{\assntitle}
+\fancyhead[R]{Sam Price}
+\fancyfoot{}
+\fancyfoot[R]{Page \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Font selection
+%\usepackage[sc]{mathpazo}
+%\usepackage{lmodern}
+%\usepackage{eulervm}
+\usepackage{tgpagella}
+
+\setlength{\parindent}{1cm}
+
+\begin{document}
+
+\lecture{}
+
+We may define a manifold implicitly as the set of solutions to the equation $F(x) = 0$,
+with $F \from \RR[k] \to \RR[n]$.
+Specifically, we can say $\sM = F\inv(0)$ is a $k$-manifold if around each $p \in \sM$
+there is a \emph{chart} $\alpha \from U \to V$ so that $\alpha$ is a diffeomorphism with $U \subset \RR[k]$ and $V \subset \RR[n]$ about $p$.
+
+\begin{definition}[Tangent Space]
+  The tangent space on $\sM$ at the point $x \in \sM$ is denoted $T\sM_{x}$.
+\end{definition}
+
+\begin{remark}
+  Hello
+\end{remark}
+
+\begin{theorem}[]
+  For $n > 1$, there are no integers $a, b, c$ so that
+  \[ a^{n} + b^{n} = c^{n}. \]
+\end{theorem}
+
+\begin{corollary}[]
+  Never again
+\end{corollary}
+
+
+\end{document}

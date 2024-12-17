@@ -1,0 +1,47 @@
+\newcounter{lecture}
+\newcommand{\lecture}[1]{
+  \stepcounter{lecture}
+  \flushleft{
+    \ifblank{#1}{
+        \Large{\textbf{Lecture \thelecture}}
+      }{
+        \Large{\textbf{Lecture \thelecture: #1}}
+      }
+      \newline
+  }
+}
+
+
+% Stolen from: https://tex.stackexchange.com/a/330460
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[%
+    \hskip\labelsep
+    \normalfont\bfseries % was \itshape
+    #1%
+    \@addpunct{.}% remove this if you don't want punctuation
+  ]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\let\qed\relax % avoid a warning
+\DeclareRobustCommand{\qed}{%
+  \ifmmode \mathqed
+  \else
+    \leavevmode\unskip\penalty\@M\hbox{}\nobreak\hspace{.5em minus .1em}% was \hfill
+    \hbox{\qedsymbol}%
+  \fi
+}
+\makeatother
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}

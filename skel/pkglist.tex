@@ -1,0 +1,43 @@
+\usepackage[T1]{fontenc}
+
+\usepackage[stretch=10]{microtype}
+\usepackage{graphicx}
+
+\usepackage[a4paper, margin=1in]{geometry}
+
+\usepackage{mathtools}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage[all, warning]{onlyamsmath}
+
+\usepackage{bm}
+
+\usepackage{version}
+
+\usepackage{fancyhdr}
+\ifbool{EnableFancyHeaders}{\pagestyle{fancy}}{}
+
+\ifbool{DoubleSpacing}{
+    \usepackage{setspace}\doublespacing%
+  }{}
+
+\ifbool{EnableShortCitations}{\usepackage[noadjust]{cite}}{}
+
+\ifbool{EnableTikz}{
+    \usepackage{tikz}
+    \usepackage{tikz-cd}
+    \usepackage{tikzsymbols}
+  }{}
+
+\usepackage{enumitem}
+
+\usepackage[makeroom]{cancel}
+
+\usepackage{nameref}
+
+\usepackage{booktabs}
+\usepackage{nicematrix}
+\NiceMatrixOptions{cell-space-limits = 1pt}
+
+\usepackage{pdfpages}
+
+\ifbool{EnableMinted}{\usepackage{minted}\usemintedstyle{vs}}{}

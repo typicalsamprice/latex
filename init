@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if test -f document.tex; then
+    mv document.tex temp-doc.tex
+fi
+
+cp ~/Git/latex/skel/*.tex ./
+
+if test -f temp-doc.tex; then
+    mv -f temp-doc.tex document.tex
+fi
